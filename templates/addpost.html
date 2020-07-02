@@ -1,0 +1,21 @@
+{%  extends 'base.html' %}
+
+{% block title %}
+Add post
+{% endblock %}
+
+{% block content %}
+<br>
+<input style="width: 100%" type="text" placeholder="Enter your nickname">
+<select class="form-control" name="ChampionSelect">
+    {% for i in range(champions|length) %}
+  <option value="{{ i + 1 }}">{{ champions[i] }}</option>
+    {% endfor %}
+</select>
+<form>
+  <div class="form-group">
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+</form>
+<button class="btn btn-primary" type="submit" name="Post">Post</button>
+{% endblock%}

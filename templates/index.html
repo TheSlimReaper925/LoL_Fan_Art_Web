@@ -1,20 +1,9 @@
 {%  extends 'base.html' %}
 
 {% block title %}
-FanArt
+FanArts
 {% endblock %}
 
 {% block content %}
-<br>
-<select class="form-control" name="ChampionSelect">
-    {% for i in champions %}
-  <option>{{ i }}</option>
-    {% endfor %}
-</select>
-<form>
-  <div class="form-group">
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-  </div>
-</form>
-<button class="btn btn-primary" type="submit" name="Post">Post</button>
+<h1 style="text-align: center">All posts from you guys</h1>
 {% endblock%}

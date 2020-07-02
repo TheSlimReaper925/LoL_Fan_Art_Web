@@ -3,12 +3,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    champions = ['Aatrox', 'Annie', 'Ahri', 'Braum']
-    return render_template('index.html', champions=champions)
+    return render_template('index.html')
 
-@app.route('/Yourpage')
+@app.route('/addpage')
 def yourpage():
-    return render_template('PersonsPage.html')
+    champions = ['Aatrox', 'Annie', 'Ahri', 'Braum']
+    return render_template('addpost.html', champions=champions)
 
 if __name__=='__main__':
     app.run(debug=True)
